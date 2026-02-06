@@ -1,0 +1,65 @@
+/* ターミナル風デザイン */
+body {
+    background-color: #000;
+    color: #0F0; /* ネオングリーン */
+    font-family: 'Consolas', 'Monospace', monospace;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#terminal {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#output {
+    flex-grow: 1;
+    overflow-y: auto;
+    white-space: pre-wrap; /* テキストの折り返し */
+    word-break: break-all;
+}
+
+#output pre {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+/* テキストの色分け */
+.prompt { color: #00FF00; }
+.info { color: #00FFFF; } /* シアン */
+.error { color: #FF0000; } /* 赤 */
+.user-msg { color: #FFFFFF; } /* 白 */
+.remote-msg { color: #FFA500; } /* オレンジ */
+.command { color: #FFFF00; } /* 黄色 */
+
+/* 入力エリア */
+#input-container {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #050; /* 細い区切り線 */
+    padding-top: 10px;
+}
+
+#prompt-prefix {
+    margin-right: 5px;
+    color: #FF69B4; /* ピンク */
+}
+
+#input {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    caret-color: #0F0; /* カーソルの色 */
+}

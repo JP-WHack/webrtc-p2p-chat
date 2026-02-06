@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>HackNet P2P Terminal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="terminal">
+        <div id="output">
+            <pre class="prompt">[[ INIT... ]]</pre>
+            <pre class="info">>> 接続したい相手のIDを <span class="command">/connect [ID]</span> で入力してください。</pre>
+            <pre class="info">>> 自分のIDは <span id="my-id-display">N/A</span> です。</pre>
+            <pre class="info">>> 接続可能なピアは <span class="command">/list</span> で確認できます。</pre>
+        </div>
+        <div id="input-container">
+            <span id="prompt-prefix">root@hacknet $</span>
+            <input type="text" id="input" autofocus>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
